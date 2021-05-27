@@ -1,4 +1,7 @@
-# ShoopingList
+# Ejecutar proyecto 
+Antes de ejecutar el proyecto debe de ejecutar el comando npm install en la ruta donde guarda el proyecto para que se instale todos los paquetes necesarios.
+
+# Login
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
