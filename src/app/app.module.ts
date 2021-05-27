@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
-import { ModalProductoComponent } from './components/modal-producto/modal-producto.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { ModalProductoComponent } from './components/modal-producto/modal-produc
     //LoginComponent,
     //HomeComponent
     routingComponents,
-    ListaProductosComponent,
-    ModalProductoComponent
+    ListaProductosComponent
   ],
   imports: [
     BrowserModule,
