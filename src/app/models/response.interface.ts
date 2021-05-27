@@ -1,3 +1,6 @@
 export interface IResponse {
-    status: boolean; 
+    codigoRetorno: string;
+    mensajeRetorno: string;
+    usuario: any;
+    token: string;  
 }

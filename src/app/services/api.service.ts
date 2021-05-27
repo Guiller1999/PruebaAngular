@@ -9,7 +9,8 @@ import {Observable} from 'rxjs'
 })
 export class ApiService {
   
-  private url: string = 'https://localhost:44378/api/usuario';
+  //private url: string = 'https://localhost:44378/api/usuario';
+  private url: string = ' https://rolimapp.com:3000/usuarios';
 
   constructor(private http: HttpClient) { 
 
@@ -18,6 +19,9 @@ export class ApiService {
 
   onLogin(form: ILogin):Observable<IResponse> {
       
-      return this.http.post<IResponse>(this.url, form);
+      return this.http.post<IResponse>(this.url, {
+        transaccion: "autenticarUsuario",
+        datosUsuario: form
+      });
   }
 }

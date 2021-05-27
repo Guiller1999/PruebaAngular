@@ -13,8 +13,8 @@ import { Router } from '@angular/router'
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    NomUsuario: new FormControl('', Validators.required),
-    Password: new FormControl('', Validators.required)
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   });
 
   constructor(private _apiService:ApiService, private router: Router) { }
@@ -25,10 +25,11 @@ export class LoginComponent implements OnInit {
   onLogin(form: ILogin): void {
     
     this._apiService.onLogin(form).subscribe(data => {
-          if(data) {
+          if(data.codigoRetorno === '0001') {
             localStorage.setItem('token', data.toString());
             this.router.navigate(['home']);
           }
+         
     });
   }
 
